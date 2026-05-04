@@ -105,6 +105,7 @@ int main (){
 
     //Task 8
     std::string text = "I love university, and I love my friends!";
+    std::cout << "\nOriginal text: " << text << std::endl;
     // Рахуємо кількість голосних у рядку
     int alphaCount = std::count_if(text.begin(), text.end(), [](char c){
         std::string vowels = "AEIOUaeiou";
