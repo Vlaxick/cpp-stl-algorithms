@@ -2,6 +2,7 @@
 #include <ctime>
 #include <list>
 #include <algorithm>
+#include <array>
 #include "Tasks.h"
 
 int main (){
@@ -29,7 +30,17 @@ int main (){
     std::cout << std::endl;
 
     //Task 2
+    // Створюємо масив з 6 іменами
+    std::array<std::string, 6> myArray{"Ira", "Vladyslav", "Pasha", "Oleksandr", "Yaroslav", "Demyan"};
+    displayContainer(myArray, "Array: ");
+    // Сортуємо масив за довжиною імен
+    std::sort(myArray.begin(), myArray.end(), [](const std::string& a, const std::string& b) {
+        return a.length() < b.length();
+    });
+    displayContainer(myArray, "Sorted by length: ");
 
+    //Task 3
+    
 
     return 0;
 }
