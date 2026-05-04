@@ -3,6 +3,9 @@
 #include <list>
 #include <algorithm>
 #include <array>
+#include <string>
+#include <vector>
+#include <deque>
 #include "Tasks.h"
 
 int main (){
@@ -40,7 +43,15 @@ int main (){
     displayContainer(myArray, "Sorted by length: ");
 
     //Task 3
-    
+    // Створюємо дек з цінами
+    std::deque<double> prices = {100.0, 25.0, 33.0, 49.0, 59.9};
+    displayContainer(prices, "Original prices: ");
+    // Застосовуємо податок до кожної ціни
+    std::for_each(prices.begin(), prices.end(), TaxApplier(0.20));
+    displayContainer(prices, "Prices after tax: ");
+
+    //Task 4
+
 
     return 0;
 }
