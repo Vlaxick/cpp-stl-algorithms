@@ -104,10 +104,13 @@ int main (){
     std::cout << "Average: " << static_cast<double>(sum) / numbers2.size() << std::endl;
 
     //Task 8
-
-
-
-
+    std::string text = "I love university, and I love my friends!";
+    // Рахуємо кількість голосних у рядку
+    int alphaCount = std::count_if(text.begin(), text.end(), [](char c){
+        std::string vowels = "AEIOUaeiou";
+        return vowels.find(c) != std::string::npos;
+    });
+    std::cout << "Count of vowels: " << alphaCount << std::endl;
 
     return 0;
 }
