@@ -92,7 +92,18 @@ int main (){
     displayContainer(numbers, "Vector after replacing negative numbers with 0: ");
 
     //Task 7
-    
+    std::vector<int> numbers2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    std::cout << "\n";
+    displayContainer(numbers2, "Original vector: ");
+    int sum = 0;
+    // Обчислюємо суму всіх чисел у векторі
+    std::for_each(numbers2.begin(), numbers2.end(), [&sum](int n){
+        sum += n;
+    });
+    std::cout << "Sum of numbers: " << sum << std::endl;
+    std::cout << "Average: " << static_cast<double>(sum) / numbers2.size() << std::endl;
+
+    //Task 8
 
 
 
