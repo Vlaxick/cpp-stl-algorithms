@@ -13,3 +13,12 @@ void displayContainer(const T& container, std::string header) {
 bool isOdd(int number) {
     return number % 2 != 0;
 }
+
+class TaxApplier {
+    double taxRate;
+public:
+    TaxApplier(double rate) : taxRate(rate) {}
+    void operator() (double& price) {
+        price += price * taxRate;
+    }
+};
