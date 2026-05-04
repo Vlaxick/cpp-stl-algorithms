@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include <deque>
+#include <set>
 #include "Tasks.h"
 
 int main (){
@@ -51,6 +52,12 @@ int main (){
     displayContainer(prices, "Prices after tax: ");
 
     //Task 4
+    std::set<int> mySet = {1, 5, 10, 15, 20, 25, 30};
+    displayContainer(mySet, "Original set: ");
+    int count = std::count_if(mySet.begin(), mySet.end(), WithinRange(10, 25));
+    std::cout << "Count of numbers within range [10, 25]: " << count << std::endl;
+
+    //Task 5
 
 
     return 0;
