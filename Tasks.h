@@ -22,3 +22,12 @@ public:
         price += price * taxRate;
     }
 };
+
+class WithinRange {
+    int min, max;
+    public:
+    WithinRange(int minVal, int maxVal) : min(minVal), max(maxVal) {}
+    bool operator() (int number) {
+        return number >= min && number <= max;
+    }
+};
