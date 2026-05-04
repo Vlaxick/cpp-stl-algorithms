@@ -84,6 +84,16 @@ int main (){
     });
 
     //Task 6
+    std::vector<int> numbers = {1, -2, 3, -4, 5, -6, 7, -8, 9, -10};
+    std::cout << "\n";
+    displayContainer(numbers, "Original vector: ");
+    // Заміняємо всі від'ємні числа з вектора на 0
+    std::replace_if(numbers.begin(), numbers.end(), [](int num){return num < 0;}, 0);
+    displayContainer(numbers, "Vector after replacing negative numbers with 0: ");
+
+    //Task 7
+    
+
 
 
 
